@@ -147,7 +147,7 @@ else:
         selected_image = st.selectbox("Pilih gambar untuk diunduh:", ["- Pilih gambar -"] + image_files)
         if selected_image != "- Pilih gambar -":
             image_path = os.path.join(image_folder, selected_image)
-            st.image(image_path, caption=selected_image, use_column_width=True)
+            st.image(image_path, caption=selected_image, use_container_width=True)
 
             with open(image_path, "rb") as file:
                 st.download_button(
